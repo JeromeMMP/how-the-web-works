@@ -1,0 +1,50 @@
+- What is HTTP?
+Hyper text transfer protocol is a protocol that processes how people gets data, or sends it, from/to a server
+
+- What is a URL?
+uniform resorce locator is a reference to a website in the Internet
+
+- What is DNS?
+domain name system works as a translator from human readable reference (url) to machine readable reference (ipAddress). 
+
+- What is a query string? 
+A query string is key value pair placed in the URL. It starts with a question mark. it usually helps search stuff from the website. 
+
+- What are two HTTP verbs and how are they different?
+* GET - Makes a request from the server that has no changes to it
+*POST - Sends data or a request  to a server that makes changes on it.
+
+- What is an HTTP request?
+is when a user or a client make a request to a server which follows the hyper text transfer protocol. 
+
+- What is an HTTP response?
+is what the server response to the user or the client using hyper text transfer protocol.
+
+- What is an HTTP header? Give a couple examples of request and response headers you have seen.
+A header is a secction that provides information about the request or response. 
+A request might be the host, accept-language. 
+A response might be contet-type.
+
+- What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser?
+1. The DNS tralates the url into an IPAddress.
+2. The browser makes requests to the IP address through HTTP.
+3. The server (IP Address) response through HTTP. Usualy sends and html. 
+4. browser reads the response and applies the html. 
+// solution. 
+1. Your browser “resolves” the name into an IP address using DNS
+2. Your browser makes a request to that IP address, including headers (info about browser, any previous cookies, and other things)
+3. The server sends a response; typically, HTML, with a status code (200 if it was sucessful)
+4. The browser makes a DOM from that HTML, and finds any other resources needed (images, CSS, JavaScript, etc)
+5. The browser makes separate HTTP requests for those resources and receives response from the server for each
+
+
+part2 
+
+$curl -H "application/json" "https//icanhazdadjoke.com/search?term=pirate 
+
+current_page":1,"limit":20,"next_page":1,"previous_page":1,"results":[{"id":"2gii3LeN7Ed","joke":"Why couldn't the kid see the pirate movie? Because it was rated arrr!"},{"id":"QuscibaMClb","joke":"What does a pirate pay for his corn? A buccaneer!"},{"id":"SvzIBAQS0Dd","joke":"What did the pirate say on his 80th birthday? Aye Matey!"},{"id":"exXSCtkOKe","joke":"Why do pirates not know the alphabet? They always get stuck at \"C\"."},{"id":"SnOf2gqjiqc","joke":"Why are pirates called pirates? Because they arrr!"}],"search_term":"pirate","status":200,"total_jokes":5,"total_pages":1}
+
+$dig icanhazdadjoke- command not found 
+
+part 3 
+Make a simple web page and serve it using python3 -m http.server. Visit the page in a browser.
